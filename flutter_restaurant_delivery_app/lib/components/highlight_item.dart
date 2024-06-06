@@ -17,6 +17,8 @@ final String itemDescription;
       child: Column(
         children: <Widget>[
           Image(
+            height: 150,
+            width: double.infinity,
             image: AssetImage(imageURI),
             fit: BoxFit.cover,
           ),

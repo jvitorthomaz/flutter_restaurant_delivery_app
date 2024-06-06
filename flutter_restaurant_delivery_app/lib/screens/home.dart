@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/main_drawer.dart';
+import 'package:panucci_ristorante/screens/food_menu.dart';
+import 'package:panucci_ristorante/screens/highlights.dart';
 import 'package:panucci_ristorante/themes/app_colors.dart';
 
 class Home extends StatefulWidget {
@@ -13,6 +15,7 @@ class _HomeState extends State<Home> {
   int _currentPage = 0;
   @override
   Widget build(BuildContext context) {
+    final List<Widget> pages = [Highlights(), FoodMenu(), ];
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ristorante Panucci"),
@@ -37,6 +40,9 @@ class _HomeState extends State<Home> {
         child: const Icon(Icons.point_of_sale),
       ),
       drawer: const MainDrawer(),
+
+      body: pages.elementAt(_currentPage),
+
       bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
