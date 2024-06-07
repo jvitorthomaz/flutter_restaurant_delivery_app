@@ -58,7 +58,7 @@ const Checkout({ Key? key }) : super(key: key);
 
             const SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.fromLTRB(0, 30.0, 0, 10),
                 child: Text(
                   "Pagamento", 
                   textAlign: TextAlign.center, 
@@ -73,7 +73,7 @@ const Checkout({ Key? key }) : super(key: key);
 
             const SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 8.0),
+                padding: const EdgeInsets.fromLTRB(0, 30.0, 0, 10),
                 child: Text(
                   "Confirmar", 
                   textAlign: TextAlign.center, 

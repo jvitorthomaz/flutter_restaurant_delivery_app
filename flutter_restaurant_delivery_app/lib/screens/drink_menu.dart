@@ -37,10 +37,10 @@ final List items = drinks;
               childCount: items.length,
             ), 
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+              crossAxisCount: MediaQuery.of(context).orientation == Orientation.landscape ? 3 : 2,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
-              childAspectRatio: 160/180,
+              childAspectRatio: MediaQuery.of(context).orientation == Orientation.landscape ? 1.2 : 160/180,
 
             ), 
           )
